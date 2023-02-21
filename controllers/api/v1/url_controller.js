@@ -6,13 +6,13 @@ exports.addUrl = async (req, res) => {
         // genareting random key of length 8 and creating object
         const url = await Url.create({url: req.query.url, key: crypto.randomBytes(4).toString("hex")});
 
-        res.status(200).json({
+        res.status(201).json({
             data: {
                 actual_url: url.url,
                 custom_url: `${req.headers.host}/${url.key}`
             },
             success: true,
-            message: "URL sortened successfully"
+            message: "URL sortened successfully. It is valid only for 30 days from last use"
         });
         
     } catch (err) {

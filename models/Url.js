@@ -17,7 +17,7 @@ const urlSchema = new mongoose.Schema({
         require: true,
         unique: true
     },
-    expireStart: {
+    lastUse: {
         type: Date,
         default: Date.now,
         expires: "30d"
