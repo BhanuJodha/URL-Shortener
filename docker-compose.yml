@@ -2,7 +2,7 @@ version: '3.9'
 services:
   app:
     container_name: url-shortener
-    image: bhanujodha/url-shortener:0.0.1.RELEASE
+    image: bhanujodha/url-shortener:1.0.0.RELEASE
     ports:
       - "8000:8000"
     restart: always
