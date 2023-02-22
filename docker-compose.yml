@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  app:
+    container_name: url-shortener
+    image: bhanujodha/url-shortener:0.0.1.RELEASE
+    ports:
+      - "8000:8000"
+    restart: always
+    environment:
+      - MONGODB_SERVER=mongo
+    networks:
+      - backend-url-shortener
+
+  mongo:
+    container_name: mongoDB
+    image: mongo
+    volumes:
+      - db-url-shortener:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - backend-url-shortener
+
+volumes:
+  db-url-shortener:
+
+networks:
+  backend-url-shortener:

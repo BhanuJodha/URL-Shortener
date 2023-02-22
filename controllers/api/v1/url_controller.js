@@ -12,7 +12,7 @@ exports.addUrl = async (req, res) => {
                 custom_url: `${req.headers.host}/${url.key}`
             },
             success: true,
-            message: "URL sortened successfully. It is valid only for 30 days from last use"
+            message: "URL shortened successfully. It is valid only for 30 days from the last use or visit."
         });
         
     } catch (err) {

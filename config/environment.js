@@ -1,3 +1,4 @@
 module.exports = {
-    db: "url_shortener"
+    DB: "url_shortener",
+    MONGODB_SERVER: process.env.MONGODB_SERVER ? process.env.MONGODB_SERVER : "localhost"
 }
