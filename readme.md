@@ -25,7 +25,7 @@ REQUIREMENTS
 This project have some special requirements like :-
 
    - docker : "^20.10.22"
-   - bhanujodha/url-shortener : "0.0.1.RELEASE"
+   - bhanujodha/url-shortener : "1.0.0.RELEASE"
    - mongo : "latest"
 
 INSTALLATION
