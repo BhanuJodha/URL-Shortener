@@ -9,7 +9,7 @@ exports.addUrl = async (req, res) => {
         res.status(201).json({
             data: {
                 actual_url: url.url,
-                custom_url: `${req.headers.host}/${url.key}`
+                custom_url: `${req.protocol}://${req.headers.host}/${url.key}`
             },
             success: true,
             message: "URL shortened successfully. It is valid only for 30 days from the last use or visit."
